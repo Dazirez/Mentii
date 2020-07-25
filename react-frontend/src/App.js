@@ -2,15 +2,24 @@ import React from "react";
 import { Grid, Button } from "@material-ui/core";
 import Header from "./Header";
 import Content from "./Content";
+import styled from "styled-components";
+import Welcome from "./Welcome";
+import Home from "./Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.css";
 
 function App() {
     return (
-        <div>
-            <h1>Mentii</h1>
-            <Button> Log in</Button>
-            <Button>Get Started</Button>
-        </div>
+        <React.Fragment>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Welcome} />
+                    <Route path="/Welcome" component={Welcome} />
+                    <Route path="/Home" component={Home} />
+                </Switch>
+            </Router>
+        </React.Fragment>
     );
 }
 
