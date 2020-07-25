@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import styled from "styled-components";
-
 import "./App.css";
 const Wrapper = styled.div`
     text-align: center;
@@ -23,7 +22,10 @@ const Subtitle = styled.h4`
 const Colored = styled.span`
     color: #f06191;
 `;
-
+const Link = styled.a`
+    text-decoration: none;
+    color: white;
+`;
 const Welcome = () => {
     return (
         <Wrapper>
@@ -36,7 +38,7 @@ const Welcome = () => {
                 Log in
             </Button>
             <Button variant="contained" color="secondary">
-                Get Started
+                <Link href="/Home">Get Started</Link>
             </Button>
         </Wrapper>
     );
