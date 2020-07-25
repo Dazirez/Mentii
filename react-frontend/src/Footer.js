@@ -8,12 +8,13 @@ const Wrapper = styled.section`
     bottom: 0;
     left: 0;
     width: 100%;
-    max-height: 50px;
+    max-height: 100%;
 `;
 const Text = styled.p`
     color: white;
     float: left;
-    margin-left: 200px;
+    margin-left: 150px;
+    font-size: 10px;
 `;
 const Footer = () => (
     <Wrapper>
